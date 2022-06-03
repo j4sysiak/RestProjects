@@ -4,11 +4,11 @@ import com.example.demo.model.Address;
 import com.example.demo.model.Customer;
 import com.example.demo.dto.OrderDTO;
 import com.example.demo.entity.Order;
-import com.example.demo.service.OrderService;
 import com.example.demo.view.OrderView;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,8 +43,8 @@ public class OrderApi {
     @JsonView({OrderView.Mail.class})   // wszystko będzie widoczne
    // @JsonView({OrderView.Normal.class})   // tylko data widoczna
     //@JsonView({OrderView.PackMachine.class})   //name nie będzie widoczny
-    public List<OrderDTO> getOrders() {
-        return orderDtoList;
+    public ResponseEntity<List<OrderDTO>> getOrders() {
+        return ResponseEntity.ok(orderDtoList);
     }
 
 //    @GetMapping
