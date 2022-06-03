@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+
+// to jest nasza encja
+
 public class Order {
     private Customer customer;
     private Address shippingAddress;

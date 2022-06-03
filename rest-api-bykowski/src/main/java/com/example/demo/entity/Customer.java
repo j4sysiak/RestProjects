@@ -6,7 +6,7 @@ public class Customer {
 
     private String name;
 
-    @JsonIgnore
+    //@JsonIgnore
     private String idCard;
 
     public Customer() {

@@ -2,6 +2,10 @@ package com.example.demo.dto;
 
 import java.time.LocalDate;
 
+// służy do ograniczania rzeczy do pokazywania na zewnątrz
+// wyciągamy z bazy danych obiekty i mapujemy na dto
+// dlatego tworzymy obiekty dto - struktura płaska
+
 public class OrderDTO {
 
     private String street;
