@@ -5,6 +5,8 @@ import com.example.demo.model.Customer;
 import com.example.demo.dto.OrderDTO;
 import com.example.demo.entity.Order;
 import com.example.demo.service.OrderService;
+import com.example.demo.view.OrderView;
+import com.fasterxml.jackson.annotation.JsonView;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +24,7 @@ public class OrderApi {
 
     // do DTO przekazujemy tylko tylko to co chcemy
     // tworzymy płaską lekką strukturę - łatwo czytelną dla frontu
-
+    // dto jest wydajne
 
     @Autowired
     public OrderApi(ModelMapper modelMapper) {
@@ -38,6 +40,9 @@ public class OrderApi {
     }
 
     @GetMapping
+    @JsonView({OrderView.Mail.class})   // wszystko będzie widoczne
+   // @JsonView({OrderView.Normal.class})   // tylko data widoczna
+    //@JsonView({OrderView.PackMachine.class})   //name nie będzie widoczny
     public List<OrderDTO> getOrders() {
         return orderDtoList;
     }
