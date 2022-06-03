@@ -20,6 +20,10 @@ public class OrderApi {
 
     private List<OrderDTO> orderDtoList;
 
+    // do DTO przekazujemy tylko tylko to co chcemy
+    // tworzymy płaską lekką strukturę - łatwo czytelną dla frontu
+
+
     @Autowired
     public OrderApi(ModelMapper modelMapper) {
         this.orderDtoList = new ArrayList<>();
