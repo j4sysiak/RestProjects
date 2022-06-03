@@ -1,5 +1,10 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.model.Address;
+import com.example.demo.model.Customer;
+import com.example.demo.dto.OrderDTO;
+import com.example.demo.entity.Order;
+import com.example.demo.service.OrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -33,4 +37,10 @@ public class OrderApi {
     public List<OrderDTO> getOrders() {
         return orderDtoList;
     }
+
+//    @GetMapping
+//    public List<Order> getOrders() {
+//        OrderService orderService = new OrderService();
+//        return orderService.getOrderList();
+//    }
 }

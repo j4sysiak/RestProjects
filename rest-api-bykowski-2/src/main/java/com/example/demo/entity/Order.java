@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.entity;
 
+
+import com.example.demo.model.Address;
+import com.example.demo.model.Customer;
 
 public class Order {
     private Customer customer;

@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.example.demo.dto.OrderDTO;
+import com.example.demo.entity.Order;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
 import org.springframework.boot.SpringApplication;
