@@ -34,6 +34,12 @@ public class ApiControllers {
         return "Saved ...";
     }
 
+    @PostMapping("/test")
+    public String sendMessage(@RequestBody String message) {
+        log.info("Send this message to jms queue: " + message);
+        return "Message sent " + message;
+    }
+
     @PutMapping(value = "/update/{id}")
     public String updateUser(@PathVariable long id, @RequestBody User user) {
         User updatedUser = userRepo.findById(id).get();
