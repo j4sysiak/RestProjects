@@ -25,48 +25,39 @@ public class User {
         return id;
     }
 
-    public
-    String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public
-    String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public
-    int getAge() {
+    public int getAge() {
         return age;
     }
 
-    public
-    String getOccupation() {
+    public String getOccupation() {
         return occupation;
     }
 
-    public
-    void setId(long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public
-    void setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public
-    void setLastName(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public
-    void setAge(int age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public
-    void setOccupation(String occupation) {
+    public void setOccupation(String occupation) {
         this.occupation = occupation;
     }
 }
