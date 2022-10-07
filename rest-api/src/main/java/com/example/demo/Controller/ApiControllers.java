@@ -2,12 +2,17 @@ package com.example.demo.Controller;
 
 import com.example.demo.Models.User;
 import com.example.demo.Repo.UserRepo;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
+@RequestMapping("/greeting")
+@Slf4j
 public class ApiControllers {
 
     @Autowired
